@@ -160,11 +160,9 @@ if __name__ == "__main__":
     print("\nDoing the math:")
     print(f"   {msg}^{e} mod {n}")
     c = encrypt_int(msg, pub)
-    # Show intermediate step for educational purposes
-    big_result = pow(msg, e)
-    print(f"   = {big_result} mod {n}")
     print(f"   = {c}")
     print(f"\nEncrypted message: {c}")
+    print("(Note: {msg}^{e} is huge - thousands of digits! - so we use modular arithmetic)")
 
     # 3) Simulate attacker with only public information
     print("\n[+] Now for the attack!")
